@@ -192,7 +192,6 @@ input {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 20%;
     box-sizing: border-box;
   }
 span{
@@ -209,14 +208,8 @@ textarea{
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    border-radius: 20%;
   }
-  
-  
-input[type=checkbox]{
-      display:inline;
-      width:inherit;
-  }
+
   
   input[type=submit] {
     background-color: pink;
