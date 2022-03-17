@@ -10,6 +10,11 @@
     <link rel="stylesheet" href ="css/style.css">
     <script src="https://kit.fontawesome.com/837d78fd3a.js" crossorigin="anonymous"></script>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway&display=swap" rel="stylesheet">
+   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-70TVJRD4K6"></script>
     <script>
@@ -23,8 +28,9 @@
 
 <body>
     <header>
-        <img class="site-title" src="images/travelwithsheryl.jpg" alt="site title">
+        <a href="index.html"><img class="site-title" id="logo" src="images/travelwithsheryl.jpg" alt="site title"> </a>
         <a class = "skip" href="#main">Skip to Main Content</a>
+        <div class="sticky">
         <nav>
             <ul>
                 <li class="active"><a href = "index.html" >Home</a></li>
@@ -33,44 +39,63 @@
                 <li><a href = "wyoming.html">Wyoming</a></li>
             </ul>
         </nav>
+    </div>
     </header>
 
 <main> 
     <div class = "gallery-slide"> 
-        <img src = "images/about-me-china.jpg" alt = "Got to visit the Great Wall of China!" width="200"/>
-        <img src = "images/about-me-hk.jpg" alt = "Stumbled across some lanterns in Hong Kong!" width="200"/> 
-        <img src = "images/about-me-tulum.jpg" alt = "A picture I took at the Grand Cenote, Tulum!" width="200"/>
+       <img src = "images/about-me-china.jpg" alt = "Got to visit the Great Wall of China!" width="200"/>
+        <img  src = "images/about-me-hk.jpg" alt = "Stumbled across some lanterns in Hong Kong!" width="200"/> 
+        <img  src = "images/about-me-tulum.jpg" alt = "A picture I took at the Grand Cenote, Tulum!" width="200"/>
         <img src = "images/about-me-valley-of-fire.jpg" alt = "Valley of Fire during sunset" width="200"/>
-        <img src = "images/bryce-solo.jpg" alt = "View of Bryce Canyon" width="200"/>
+        <img  src = "images/bryce-solo.jpg" alt = "View of Bryce Canyon" width="200"/> 
     </div>
+        <!-- <div class = "section-1">
+            <img src = "images/about-me-china.jpg" alt = "Got to visit the Great Wall of China!" width="200"/>
+            <img  src = "images/about-me-hk.jpg" alt = "Stumbled across some lanterns in Hong Kong!" width="200"/> 
+            <img  src = "images/about-me-tulum.jpg" alt = "A picture I took at the Grand Cenote, Tulum!" width="200"/>
+        </div>
+
+        <div class="section-2">
+            <img src = "images/about-me-valley-of-fire.jpg" alt = "Valley of Fire during sunset" width="200"/>
+            <img  src = "images/bryce-solo.jpg" alt = "View of Bryce Canyon" width="200"/> 
+        </div> -->
+    
 
     <div class="about-me" id="main"> 
         <img src = "images/boyne-solo.jpg" alt = "A picture of Sheryl at Boyne Mountain" width="200"/> 
-        <p id="intro"> Hey, I'm Sheryl! Welcome to my travel blog! </p>
+        
+        <div class="intro-abt-me">
+        <p id="intro"> Hey, I'm Sheryl! Welcome to my travel blog! </p> 
+        <br>
             
-        <p> I'm currently pursuing a Bachelor of Business Administration with a concentration in Marketing and Business Analytics 
-            at the University of Michigan. When I'm not sliding my way through the snow-covered pavements to get to class, you can catch me taking the next flight out 
-            of Michigan! </p>
+        <p> I'm currently pursuing a Bachelor of Business Administration at the University of Michigan. When I'm not sliding my way through the snow-covered pavements to get to class, you can catch me taking the next flight out 
+            of Ann Arbor! </p> 
+            <br>
             
         <p> Growing up in Malaysia, I had the opportunity to travel around Southeast Asia.
             My first memorable trip out of the country was when I was 5 years old and I was super excited to be visiting all the Disney princesses in Disneyland at Anaheim, LA!
             Ever since then, I fell in love with everything about travelling: exchanging cultures, exploring new eats and more. </p> 
+            <br>
             
-        <p> I created this blog to share my travel photos, tips, thoughts, and stories with you!</p> 
+        <p> I created this blog to share my travel tips, photos, thoughts, and stories with you!</p> 
+            <br>
+        </div>
     </div>
-
-   
 </main>
 
 <footer>
     
     <div class="icons">
         <p> Connect with me </p>
+        <br>
         <a href="https://www.facebook.com/sheryl.lee.31/" class="fa-brands fa-facebook-f"></a>
         <a href="https://www.instagram.com/sheryyllee/" class="fa-brands fa-instagram"></a> 
         <a href="https://www.linkedin.com/in/sherylleeyl/" class="fa-brands fa-linkedin-in"></a>
     </div>
-    <a href="contact-form.html" class="contact-form"> Let's Connect </p>
+    <a href="contact-form.html" class="contact-form"> Let's Connect </a>
+        <br>
+        <br>
     <p> Sheryl Lee &copy; 2022</p>
 </footer>
 

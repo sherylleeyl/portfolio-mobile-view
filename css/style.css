@@ -1,24 +1,42 @@
-p, h1, h2,h3, h4, li, img, div {
+h1, h2,h3, h4, li, img, div{
     margin: 20px 20px 20px 20px;
     padding-top: 20px;
+}
+
+p{ 
+  margin-left: 20px;
 }
 
 .skip { 
     display: none;
 }
 
+/******** Index Page *******/
 .site-title{
-    all: none; 
     border: none;
-    min-height: 100%; 
-    width: 100%;
+    height: auto; 
+    width: 80%;
+    margin-bottom: 0;
  }
-/*** Navigation Bar Styling ****/
+
+ #logo{ 
+  animation-name: grow;
+  animation-duration: 5s;
+ }
+
+/* Navigation Bar Styling */
 nav { 
-    width: 100%;
+    width: 100%;   
+}
+
+div.sticky{
+  position: sticky;
+  top: 0;
+  margin-top: 0;
 }
 nav ul { 
     display:flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     text-decoration: none;
@@ -45,26 +63,100 @@ nav li {
      color: #696969;
  }
 
-.active{
+.active a{
     font-weight: bold;
-    text-decoration: underline 2px;
+    text-decoration: underline 4px;
     text-decoration-color: pink;
     cursor: pointer;
 }
-/* Index page gallery slider*/ 
 
+/*Index page gallery slider */
+.gallery-slide > img {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  position: absolute;
+  left: 0px;
+  opacity: 0;
+  height: 80%;
+  z-index: 0;
+  width:100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.gallery-slide > img:nth-child(1) { 
+  background-image: url("../images/about-me-china.jpg"); }
+.gallery-slide > img:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url("../images/about-me-hk.jpg");
+}
+.gallery-slide > img:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url("images/bryce-solo.jpg");
+}
+.gallery-slide > img:nth-child(4) {
+  animation-delay: 18s;
+  background-image: url("images/about-me-tulum.jpg");
+}
+.gallery-slide > img:nth-child(5) {
+  animation-delay: 24s;
+  background-image: url("images/about-me-valley-of-fire.jpg");
+}
+
+@keyframes 
+imageAnimation {  0% {
+ /* animation-timing-function: ease-in; */
+ opacity: 0;
+}
+ 8% {
+ /* animation-timing-function: ease-out; */
+ opacity: 1;
+ /* width: 50%; */
+ /* left: 20px; */
+}
+ 17% {
+ opacity: 1;
+}
+ 25% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 0;
+}
+}
 
 /* About me Styling */
-div #main.about-me{ 
+.about-me{ 
+  margin-top: 700px;
+  text-align: center;
+}
+.about-me img{
+  box-sizing: content-box;
+  padding: 0;
+  margin: 40px;
+}
+#main.about-me{ 
     background-color: #f0d8d8;
-    display: flex; 
-    flex-wrap: nowrap;
 }
 
-div #intro.about-me{
-    font-weight: bold;
+.intro-abt-me{
+  padding-bottom: 20px;
 }
-/***** Image Styling ****/
+
+p#intro { 
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  
+}
+.about-me p{
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+}
+/*Image Styling*/
 img{ 
     margin: 10px; 
     padding: 20px;
@@ -73,27 +165,6 @@ img{
     box-sizing: border-box;
     transition: 1s ease;
  }
-
-/*img:hover, a:focus{ 
-    box-shadow: 20px 20px #F8F0ED; 
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: 1s ease;        
-  }
-  */
-
-/* Nth child: every other image has different box shadow*/
-
-/*img:hover:nth-child(2n) { 
-    box-shadow: 20px 20px rgb(204, 205, 241); 
-    border-radius: 100%;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    transition: 1s ease;   
-} */
-
 
 /* Gallery in Home Page Styling*/
 .gallery img {
@@ -108,7 +179,7 @@ img{
     transition: 1s ease;
     }
 
-/***** Footer Styling *****/ 
+/*Footer Styling*/ 
 footer{
     text-align: center;
 }
@@ -118,6 +189,7 @@ footer{
     font-family: "Font Awesome 6 Brands";
     font-weight: 300;
 }
+
 .icons a:link{ 
     color: #222222;
     text-decoration: none;
@@ -125,10 +197,11 @@ footer{
 .icons a:visited{ 
     color: #222222;
 }
-.icons a:hover{
-    color: #C19897;
-}
 
+.icons p{
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
 
 /* General Text Styling*/
  
@@ -153,14 +226,50 @@ p{
     color: #423634;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
+  /* About Me Section */
+    
+    #main.about-me{ 
+      display: flex; 
+      flex-wrap: nowrap;
+    }
+
+    .intro-abt-me { 
+      align-self: center;
+    }
+
+    nav ul { 
+      flex-direction: row;
+    }
 
 }
 
-
-
-
-
+@media screen and (min-width: 1200px) {
+  .about-me{
+    margin-top: 800px;
+  }
+  /* Typing Effect */ 
+  p#intro{ 
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite; 
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  } 
+}
 
 
 /**** Contact Form ****/ 
@@ -210,7 +319,6 @@ textarea{
     box-sizing: border-box;
   }
 
-  
   input[type=submit] {
     background-color: pink;
     color: black;
@@ -246,4 +354,24 @@ textarea{
       vertical-align:top;
    }
   }
+
+  /*img:hover, a:focus{ 
+    box-shadow: 20px 20px #F8F0ED; 
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;        
+  }
+  */
+
+/* Nth child: every other image has different box shadow*/
+
+/*img:hover:nth-child(2n) { 
+    box-shadow: 20px 20px rgb(204, 205, 241); 
+    border-radius: 100%;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;   
+} */
 
