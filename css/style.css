@@ -320,11 +320,16 @@ p{
 }
 
 /**** Content Page : KL, Wyoming, Utah ****/
-.content-kl, .content-utah, .content-wyoming { 
+.content-kl, .content-utah{ 
   display: grid;
   grid-template-columns: 1fr;
 }
 
+.content-wyoming{ 
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: nowrap
+}
 /**** Contact Form ****/ 
 .contact-form body {
     background-color: #f0d8d8;
